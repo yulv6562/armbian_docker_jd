@@ -1,3 +1,8 @@
+感谢项目原作者：https://github.com/chinnkarahoi/jd-scripts-docker
+感谢脚本原作者：https://github.com/LXK0301/jd_scripts
+
+非常抱歉：该fork只根据自己需求修改用来测试的，不建议不了解的朋友使用。
+
 ## jd-scripts-docker
 docker启动。
 
@@ -5,7 +10,7 @@ docker启动。
 git docker docker-compose
 ### 下载
 ```sh
-git clone https://github.com/chinnkarahoi/jd-scripts-docker
+git clone https://github.com/yulv6562/jd-scripts-docker
 cd jd-scripts-docker
 ```
 ### 获取cookie

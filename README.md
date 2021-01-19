@@ -20,10 +20,11 @@ cd jd-scripts-docker
 更详细的获取方法可以看
 [浏览器获取京东cookie教程](https://gitee.com/lxk0301/jd_scripts/blob/master/backUp/GetJdCookie.md)或者
 [插件获取京东cookie教程](https://gitee.com/lxk0301/jd_scripts/blob/master/backUp/GetJdCookie2.md)
-### 微信推送（可选）
+### 消息推送（可选）
+【微信】
 cookie失效推送，等相关脚本执行消息推送。
 [server酱的微信通知](http://sc.ftqq.com/3.version)，获取到SCKEY后填到./env/all的PUSH_KEY。
-### BARK推送（可选）
+【BARK】
 cookie失效推送，等相关脚本执行消息推送。
 手机上下载BARK，注册BARK，获取到SCKEY后填到./env/all的BARK_PUSH里
 可以自定义推送提示音，比如BARK_SOUND=birdsong

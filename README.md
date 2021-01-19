@@ -15,7 +15,12 @@ cd jd-scripts-docker
 [浏览器获取京东cookie教程](https://gitee.com/lxk0301/jd_scripts/blob/master/backUp/GetJdCookie.md)或者
 [插件获取京东cookie教程](https://gitee.com/lxk0301/jd_scripts/blob/master/backUp/GetJdCookie2.md)
 ### 微信推送（可选）
-cookie失效推送[server酱的微信通知](http://sc.ftqq.com/3.version)，获取到SCKEY后填到./env/all的PUSH_KEY。
+cookie失效推送，等相关脚本执行消息推送。
+[server酱的微信通知](http://sc.ftqq.com/3.version)，获取到SCKEY后填到./env/all的PUSH_KEY。
+### BARK推送（可选）
+cookie失效推送，等相关脚本执行消息推送。
+手机上下载BARK，注册BARK，获取到SCKEY后填到./env/all的BARK_PUSH里
+可以自定义推送提示音，比如BARK_SOUND=birdsong
 ### 启动
 ```sh
 docker-compose up --build --force-recreate --detach jd1
@@ -36,7 +41,10 @@ docker exec jd1 bash -c 'set -o allexport; source /all; source /env; source /jd-
 ```sh
 bash get-code.sh
 ```
-
+或者手动运行这个脚本导出互助码
+```sh
+docker exec jd1 bash -c 'set -o allexport; source /all; source /env; source /jd-scripts-docker/resolve.sh; cd /scripts; node jd_get_share_code.js'
+```
 ### 更多配置
 比如微信推送，各种活动控制，需要配置./env/all文件, 具体参数的含义可以参考[Secrets全集合](https://gitee.com/lxk0301/jd_scripts/blob/master/githubAction.md)
 

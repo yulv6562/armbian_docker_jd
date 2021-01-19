@@ -4,7 +4,7 @@ x-logger: &logger
     driver: "json-file"
     options:
       max-size: "10m"
-      max-file: "3"
+      max-file: "5"
 x-common: &common
   image: jd-scripts:latest
   build:
@@ -30,3 +30,15 @@ services:
     volumes:
       - ./env/all:/all
       - ./env/env3:/env
+  jd4:
+    <<: [ *logger, *common ]
+    container_name: jd4
+    volumes:
+      - ./env/all:/all
+      - ./env/env4:/env
+  jd5:
+    <<: [ *logger, *common ]
+    container_name: jd5
+    volumes:
+      - ./env/all:/all
+      - ./env/env5:/env
